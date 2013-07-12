@@ -228,7 +228,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         }
 
         final float threeRadius = mRadius * 3;
-        final float shortOffset = shortPaddingBefore + mRadius;
+        final float shortOffset = shortPaddingBefore + mRadius + 3;
         float longOffset = longPaddingBefore + mRadius;
         if (mCentered) {
             longOffset += ((longSize - longPaddingBefore - longPaddingAfter) / 2.0f) - ((count * threeRadius) / 2.0f);
@@ -501,7 +501,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
                 result = Math.min(result, specSize);
             }
         }
-        return result;
+        return result + 4;
     }
 
     @Override
